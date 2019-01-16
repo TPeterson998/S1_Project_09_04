@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+     Name: Trent Peterson
+     Date: 1.16.19
+-->
+<html class="no-js">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+    <script src="mc_script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="mc_logo.png" alt="">
+        <a href="example.com">Back</a>
+    </header>
+    <form action=" http://www.mill_computers.com/orders/process.cgi." method="POST">
+
+        <fieldset>
+
+            <legend>Customer Location</legend>
+            <div class="formRow">
+                <label for="fName">First Name*</label>
+                <input name="fName" id="fName" type="text" placeholder="first name" required /></div>
+            <div class="formRow">
+                <label for="lName">Last Name*</label>
+                <input name="lName" id="lName" type="text" placeholder="last name" required /></div>
+            <div class="formRow">
+                <label for="street">Street address*</label>
+                <input name="street" id="street" type="text" placeholder="12345 example pkwy" /></div>
+            <div class="formRow">
+                <label for="city">City*</label>
+                <input name="city" id="city" type="text" placeholder="New York" /></div>
+            <div class="formRow">
+                <label for="state">State*</label>
+                <input name="state" id="state" type="text" placeholder="New York" /></div>
+            <div class="formRow">
+                <label for="zip">Zip code</label>
+                <input name="zip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$" /></div>
+            <div class="formRow">
+                <label for="phone">Phone number</label>
+                <input name="phone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)/s*)?\d{3}[\s-]?\d{4}" /></div>
+        </fieldset>
+        <fieldset>
+            <legend>Computer Type</legend>
+            <div class="formRow">
+
+                <label for="pSpeed">Processor Speed</label>
+                <select name="pSpeed" id="pSpeed">
+                    <option value="3.2 GHz">3.2 GHz</option>
+                    <option value="4.0 GHz">4.0 GHz</option>
+                    <option value="5.2 GHz">5.2 GHz</option>
+                </select>
+            </div>
+            <div class="formRow">
+                <label for="mem">Memory</label>
+                <select name="mem" id="mem">
+                    <option value="1 GB">1 GB</option>
+                    <option value="2 GB">2 GB</option>
+                    <option value="4 GB">4 GB</option>
+                    <option value="8 GM">8 GM</option>
+                </select>
+            </div>
+            <div class="formRow">
+                <label for="monitor">Monitor Size</label>
+                <select name="monitor" id="monitor">
+                    <option value="15">15"</option>
+                    <option value="17">17"</option>
+                    <option value="19">19"</option>
+                    <option value="21">21"</option>
+                </select>
+            </div>
+            <div class="formRow">
+                <label for="hd">Hard Drive</label>
+                <select name="hd" id="hd">
+                    <option value="240 GB">240 GB</option>
+                    <option value="500 GB">500 GB</option>
+                    <option value="750 GB">750 GB</option>
+                    <option value="1 TB">1 TB</option>
+                </select>
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

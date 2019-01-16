@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* Name: Trent Peterson
+     Date: 1.16.19 */
+
+img {
+    width: 100%
+}
+
+a {
+    font-size: 1.2em;
+}
+
+form::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+html {
+    background-image: linear-gradient(to right, blue, white);
+    color: rgb(216, 216, 216)
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.541);
+
+
+}
