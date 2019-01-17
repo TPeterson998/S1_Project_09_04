@@ -18,42 +18,47 @@
 
 <body>
     <header>
-        <img src="mc_logo.png" alt="">
-        <a href="example.com">Back</a>
+
+        <a href="example.com"> <img src="mc_logo.png" alt=""></a>
     </header>
+    <p>When placeing an order, please fill out the entire form. To submit your order, click the "Place Order" button
+        below
+        the form. To cancel the order click the "Cancel Order" button below the form. To contact the company click the
+        "Contact Us" button. To go back to our site click logo at the top of the page.</p>
     <form action=" http://www.mill_computers.com/orders/process.cgi." method="POST">
 
         <fieldset>
 
-            <legend>Customer Location</legend>
+            <legend>Delivery Location</legend>
             <div class="formRow">
-                <label for="fName">First Name*</label>
-                <input name="fName" id="fName" type="text" placeholder="first name" required /></div>
+                <label for="fName">First Name</label>
+                <input name="fName" id="fName" type="text" placeholder="First name" required /></div>
             <div class="formRow">
-                <label for="lName">Last Name*</label>
-                <input name="lName" id="lName" type="text" placeholder="last name" required /></div>
+                <label for="lName">Last Name</label>
+                <input name="lName" id="lName" type="text" placeholder="Last name" required /></div>
             <div class="formRow">
-                <label for="street">Street address*</label>
-                <input name="street" id="street" type="text" placeholder="12345 example pkwy" /></div>
+                <label for="street">Street Address</label>
+                <input name="street" id="street" type="text" placeholder="12345 example pkwy" required /></div>
             <div class="formRow">
-                <label for="city">City*</label>
-                <input name="city" id="city" type="text" placeholder="New York" /></div>
+                <label for="city">City</label>
+                <input name="city" id="city" type="text" placeholder="New York" required /></div>
             <div class="formRow">
-                <label for="state">State*</label>
-                <input name="state" id="state" type="text" placeholder="New York" /></div>
+                <label for="state">State</label>
+                <input name="state" id="state" type="text" placeholder="New York" required /></div>
             <div class="formRow">
                 <label for="zip">Zip code</label>
-                <input name="zip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$" /></div>
+                <input name="zip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$" required /></div>
             <div class="formRow">
                 <label for="phone">Phone number</label>
-                <input name="phone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)/s*)?\d{3}[\s-]?\d{4}" /></div>
+                <input name="phone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)/s*)?\d{3}[\s-]?\d{4}"
+                    required /></div>
         </fieldset>
         <fieldset>
             <legend>Computer Type</legend>
             <div class="formRow">
 
                 <label for="pSpeed">Processor Speed</label>
-                <select name="pSpeed" id="pSpeed">
+                <select name="pSpeed" id="pSpeed" required>
                     <option value="3.2 GHz">3.2 GHz</option>
                     <option value="4.0 GHz">4.0 GHz</option>
                     <option value="5.2 GHz">5.2 GHz</option>
@@ -61,7 +66,7 @@
             </div>
             <div class="formRow">
                 <label for="mem">Memory</label>
-                <select name="mem" id="mem">
+                <select name="mem" id="mem" required>
                     <option value="1 GB">1 GB</option>
                     <option value="2 GB">2 GB</option>
                     <option value="4 GB">4 GB</option>
@@ -70,7 +75,7 @@
             </div>
             <div class="formRow">
                 <label for="monitor">Monitor Size</label>
-                <select name="monitor" id="monitor">
+                <select name="monitor" id="monitor" required>
                     <option value="15">15"</option>
                     <option value="17">17"</option>
                     <option value="19">19"</option>
@@ -79,12 +84,39 @@
             </div>
             <div class="formRow">
                 <label for="hd">Hard Drive</label>
-                <select name="hd" id="hd">
+                <select name="hd" id="hd" required>
                     <option value="240 GB">240 GB</option>
                     <option value="500 GB">500 GB</option>
                     <option value="750 GB">750 GB</option>
                     <option value="1 TB">1 TB</option>
                 </select>
+            </div>
+            <div class="formRow">
+                <label>Include a DVD Burner?</label>
+                <fieldset class="radio">
+                    <label for="yDvd">Yes</label>
+                    <input name="yDvd" id="yDvd" value="yes" type="radio" />
+                    <label for="nDvd">No</label>
+                    <input name="nDvd" id="nDvd" value="no" type="radio" />
+                </fieldset>
+            </div>
+            <div class="formRow">
+                <label>Include a Tuner Card?</label>
+                <fieldset class="radio">
+                    <label for="yTuner">Yes</label>
+                    <input name="yTuner" id="yTuner" value="yes" type="radio" />
+                    <label for="nTuner">No</label>
+                    <input name="nTuner" id="nTuner" value="no" type="radio" />
+                </fieldset>
+            </div>
+            <div class="formRow">
+                <label>Include a Media Card Reader?</label>
+                <fieldset class="radio">
+                    <label for="yMcard">Yes</label>
+                    <input name="yMcard" id="yMcard" value="yes" type="radio" />
+                    <label for="nMcard">No</label>
+                    <input name="nMcard" id="nMcard" value="no" type="radio" />
+                </fieldset>
             </div>
 
         </fieldset>

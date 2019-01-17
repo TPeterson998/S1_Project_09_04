@@ -11,15 +11,31 @@ a {
     font-size: 1.2em;
 }
 
+form {
+    width: 100%;
+    margin: 2em 4em 0em 4em;
+}
+
+p {
+    text-align: center;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
 form::after {
     clear: both;
     content: "";
     display: table;
 }
 
+body {
+    margin: 0em 6em 0em 6em;
+}
+
 html {
     background-image: linear-gradient(to right, blue, white);
-    color: rgb(216, 216, 216)
+    color: rgb(216, 216, 216);
+    font-size: 1.3em;
 }
 
 body {
