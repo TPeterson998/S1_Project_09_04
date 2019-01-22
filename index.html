@@ -5,6 +5,7 @@
 -->
 <html class="no-js">
 
+<!-- I linked my forms and styles external style sheets I also linked the script they gave me in -->
 
 <head>
     <meta charset="utf-8">
@@ -17,18 +18,18 @@
 </head>
 
 <body>
+    <!-- This is the start of my form. My form is just a branch off of an orginal page so I made sure there was some kind of back buttons in the logo at the top -->
     <header>
-
         <a href="example.com"> <img src="mc_logo.png" alt=""></a>
     </header>
     <p>When placeing an order, please fill out the entire form. To submit your order, click the "Place Order" button
         below
         the form. To cancel the order click the "Cancel Order" button below the form. To contact the company click the
-        "Contact Us" button. To go back to our site click logo at the top of the page.</p>
+        "Contact Us" button. To go back to our site click our logo at the top of the page.</p>
     <form action=" http://www.mill_computers.com/orders/process.cgi." method="POST">
 
-        <fieldset>
-
+        <fieldset id="location">
+            <!-- In this I put all of the location info, like name, street, city, state, zip, and phone. Zip and phone bothe have regular expressions. Also I made everything required because i didn't know the info that companies need to send somthing to your home. -->
             <legend>Delivery Location</legend>
             <div class="formRow">
                 <label for="fName">First Name</label>
@@ -55,8 +56,8 @@
         </fieldset>
         <fieldset>
             <legend>Computer Type</legend>
+            <!-- This has all of the selection lists, radio buttons, the check box, and the text area for the project. it also amkes all of the radio buttons and the check box pre selected at yes -->
             <div class="formRow">
-
                 <label for="pSpeed">Processor Speed</label>
                 <select name="pSpeed" id="pSpeed" required>
                     <option value="3.2 GHz">3.2 GHz</option>
@@ -64,6 +65,7 @@
                     <option value="5.2 GHz">5.2 GHz</option>
                 </select>
             </div>
+
             <div class="formRow">
                 <label for="mem">Memory</label>
                 <select name="mem" id="mem" required>
@@ -73,6 +75,7 @@
                     <option value="8 GM">8 GM</option>
                 </select>
             </div>
+
             <div class="formRow">
                 <label for="monitor">Monitor Size</label>
                 <select name="monitor" id="monitor" required>
@@ -82,6 +85,7 @@
                     <option value="21">21"</option>
                 </select>
             </div>
+
             <div class="formRow">
                 <label for="hd">Hard Drive</label>
                 <select name="hd" id="hd" required>
@@ -91,37 +95,56 @@
                     <option value="1 TB">1 TB</option>
                 </select>
             </div>
+
             <div class="formRow">
                 <label>Include a DVD Burner?</label>
                 <fieldset class="radio">
-                    <label for="yDvd">Yes</label>
-                    <input name="yDvd" id="yDvd" value="yes" type="radio" />
-                    <label for="nDvd">No</label>
-                    <input name="nDvd" id="nDvd" value="no" type="radio" />
+                    <label for="dYes">Yes</label>
+                    <input name="dBurner" id="dYes" value="yes" type="radio" checked />
+                    <label for="dNo">No</label>
+                    <input name="dBurner" id="dNo" value="no" type="radio" />
                 </fieldset>
             </div>
+
             <div class="formRow">
                 <label>Include a Tuner Card?</label>
                 <fieldset class="radio">
-                    <label for="yTuner">Yes</label>
-                    <input name="yTuner" id="yTuner" value="yes" type="radio" />
-                    <label for="nTuner">No</label>
-                    <input name="nTuner" id="nTuner" value="no" type="radio" />
+                    <label for="tYes">Yes</label>
+                    <input name="tCard" id="tYes" value="yes" type="radio" checked />
+                    <label for="tNo">No</label>
+                    <input name="tCard" id="tNo" value="no" type="radio" />
                 </fieldset>
             </div>
+
             <div class="formRow">
                 <label>Include a Media Card Reader?</label>
                 <fieldset class="radio">
-                    <label for="yMcard">Yes</label>
-                    <input name="yMcard" id="yMcard" value="yes" type="radio" />
-                    <label for="nMcard">No</label>
-                    <input name="nMcard" id="nMcard" value="no" type="radio" />
+                    <label for="mYes">Yes</label>
+                    <input name="cReader" id="mYes" value="yes" type="radio" checked />
+                    <label for="mNo">No</label>
+                    <input name="cReader" id="mNo" value="no" type="radio" />
                 </fieldset>
             </div>
-
+            <div class="formRow">
+                <input type="checkbox" id="warranty" name="warranty" value="yes" checked>
+                <label for="warranty">24-month extended warranty</label>
+            </div>
+            <div class="formRow">
+                <label for="questions">Please type any additional questions or comments about your order</label>
+                <textarea name="questions" id="questions"></textarea>
+            </div>
         </fieldset>
+        <!-- This has the three buttons required but I changed the contanct us to contact me because i thought that sounded better -->
+        <div id="buttons">
+            <input type="submit" value="Send Order">
+            <input type="reset" value="Cancel Order">
+            <input type="button" value="Contact Us">
+        </div>
     </form>
-
+    <!-- the footer is just there to prevent container collapse -->
+    <footer>
+        <p>stuff</p>
+    </footer>
 </body>
 
 </html>

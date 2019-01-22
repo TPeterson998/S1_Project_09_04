@@ -3,43 +3,51 @@
 /* Name: Trent Peterson
      Date: 1.16.19 */
 
+
+/* This make sure the logo at the top goes across the entire body. */
 img {
     width: 100%
 }
 
-a {
-    font-size: 1.2em;
-}
-
+/* This is just basic sizeing/spaceing for the form */
 form {
     width: 100%;
-    margin: 2em 4em 0em 4em;
+    margin: auto;
+    height: 100%;
 }
 
+/* This is to center the top paragraph  */
 p {
     text-align: center;
     margin-left: 4em;
     margin-right: 4em;
 }
 
-form::after {
+/* Makes sure the footeris not seen */
+footer {
+    display: none;
+}
+
+/* Prevent container collapse */
+footer::after {
     clear: both;
     content: "";
     display: table;
 }
 
+/* This sets up the sizing,spacing, and background color for the main body. It also helps it size with phones */
 body {
-    margin: 0em 6em 0em 6em;
+    margin: auto;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.541);
+    min-width: 320px;
+    max-width: 1200px;
+    width: 100%;
 }
 
+/* This sets up the font size and color for the entire document and the background gradient */
 html {
     background-image: linear-gradient(to right, blue, white);
     color: rgb(216, 216, 216);
     font-size: 1.3em;
-}
-
-body {
-    background-color: rgba(0, 0, 0, 0.541);
-
-
 }
